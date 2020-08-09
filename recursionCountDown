@@ -1,0 +1,12 @@
+/* This function countdowns from a number using the constant countArray which is equal to n-1 and making n 
+in the front using the Java unshift function. The countArray is added to the countdown function, returning an array of decreasing values
+*/
+function countdown(n){
+  if (n <1){
+    return [];
+  } else {
+    const countArray = countdown(n-1);
+    countArray.unshift(n);
+    return countArray;
+  }
+}
